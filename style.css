@@ -1,0 +1,440 @@
+@font-face {
+    font-family: f1;
+    src: url('./assets/Ballooning.otf');
+}    
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: f1;
+    }
+
+    .happy-birthday h1 {
+        margin-right: 650px;
+        font-size: 10em;
+        letter-spacing: 7px;
+        font-weight: 500;
+        font-family: f1;
+        color: #f75c03;
+        text-align: center;
+        text-shadow: 2px 2px 20px white;
+    }
+
+    #img1{
+        position: absolute;
+        left: 450px;
+    }
+    #img2{
+        position: absolute;
+        left: 309px;
+        top: 90px;
+    }
+    #img3{
+        position: absolute;
+        left: 629px;
+        top: 94px;
+    }
+    #img4{
+        position: absolute;
+        left: 605px;
+        top: 304px;
+    }
+    #img5{
+        position: absolute;
+        left: 245px;
+        top: 310px;
+    }
+    #img6{
+        position: absolute;
+        left: 472px;
+        top: 426px;
+    }
+    #img7{
+        position: absolute;
+        left: 489px;
+        top: 228px;
+    }
+    #allimgdiv{
+        position: absolute;
+        top: 100px;
+        left: 770px;
+    }        
+
+    body{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        padding-top: 8vh;
+        flex-direction: column;
+        background: #33e0ff;
+        overflow: hidden;
+      }
+
+    .slider{
+        display: none;
+    }
+
+    section {
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    #parde {
+        position: absolute;
+        top: -200px;
+        left: -100px;
+        z-index: -1;
+    }
+
+    #parde1 {
+        position: absolute;
+        top: -200px;
+        right: 0px;
+        z-index: 1;
+        transform: rotateY(180deg);
+    }
+      
+@media only screen and (max-width: 800px){
+
+    #parde {
+        display: inherit;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        width: 50vh;
+        z-index: -1;
+    }
+
+    #parde1 {
+        display: none;
+    }
+
+    .happy-birthday h1 {
+        font-size: 5em;
+        font-family: f1;
+        color: #f75c03;
+        text-align: center;
+        margin: 0;
+    }
+
+    section {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #allimgdiv {
+        display: none;
+    }
+    
+      .slider{
+        display: inherit;
+        width: 200px;
+        height: 300px;
+        overflow: hidden;
+        border: 15px solid white;
+      }
+      
+      .slides{
+        width: 500%;
+        height: 500px;
+        display: flex;
+      }
+      
+      .slides input{
+        display: none;
+      }
+      
+      .slide{
+        width: 20%;
+        transition: 2s;
+      }
+      
+      .slide img{
+        width: 200px;
+        height: 300px;
+      }
+      
+      /*css for manual slide navigation*/
+      
+      .navigation-manual{
+        position: absolute;
+        width: 800px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .manual-btn{
+        border: 2px solid #40D3DC;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+      }
+      
+      .manual-btn:not(:last-child){
+        margin-right: 40px;
+      }
+      
+      .manual-btn:hover{
+        background: #40D3DC;
+      }
+      
+      #radio1:checked ~ .first{
+        margin-left: 0;
+      }
+      
+      #radio2:checked ~ .first{
+        margin-left: -20%;
+      }
+      
+      #radio3:checked ~ .first{
+        margin-left: -40%;
+      }
+      
+      #radio4:checked ~ .first{
+        margin-left: -60%;
+      }
+
+      #radio5:checked ~ .first{
+        margin-left: -80%;
+      }
+
+      #radio6:checked ~ .first{
+        margin-left: -100%;
+      }
+
+      #radio7:checked ~ .first{
+        margin-left: -120%;
+      }
+      
+      /*css for automatic navigation*/
+      
+      .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 800px;
+        justify-content: center;
+        margin-top: 460px;
+      }
+      
+      .navigation-auto div{
+        border: 2px solid #40D3DC;
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+      }
+      
+      .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+      }
+      
+      #radio1:checked ~ .navigation-auto .auto-btn1{
+        background: #40D3DC;
+      }
+      
+      #radio2:checked ~ .navigation-auto .auto-btn2{
+        background: #40D3DC;
+      }
+      
+      #radio3:checked ~ .navigation-auto .auto-btn3{
+        background: #40D3DC;
+      }
+      
+      #radio4:checked ~ .navigation-auto .auto-btn4{
+        background: #40D3DC;
+      }
+
+      #radio4:checked ~ .navigation-auto .auto-btn5{
+        background: #40D3DC;
+      }
+
+      #radio4:checked ~ .navigation-auto .auto-btn6{
+        background: #40D3DC;
+      }
+
+      #radio4:checked ~ .navigation-auto .auto-btn7{
+        background: #40D3DC;
+      }
+
+      #join-button-box{
+        width: 80%;
+        height: 10vh;
+        margin-top: 2vh;
+      }
+
+      #join-us-button {
+        font-size: 0.7em;
+      }
+
+    }
+
+    /* balloons  */
+    #balloon-container {
+        height: 100vh;
+        padding: 1em;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+      }
+      
+      .balloon {
+        height: 125px;
+        width: 95px;
+        border-radius: 75% 75% 70% 70%;
+        position: relative;
+      }
+      
+      .balloon:before {
+        content: "";
+        height: 75px;
+        width: 1px;
+        padding: 1px;
+        background-color: #FDFD96;
+        display: block;
+        position: absolute;
+        top: 125px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      
+      .balloon:after {
+          content: "▲";
+          text-align: center;
+          display: block;
+          position: absolute;
+          color: inherit;
+          top: 120px;
+          left: 0;
+          right: 0;
+          margin: auto;
+      }
+      
+      @keyframes float {
+        from {transform: translateY(100vh);
+        opacity: 1;}
+        to {transform: translateY(-300vh);
+        opacity: 0;}
+      }
+
+      #join-button-box{
+          width: 95%;
+          height: 15vh;
+          
+          border: solid white;
+          background-color: #f75c03;
+          color: white;
+          box-shadow: 5px 5px 11px rgb(22, 20, 20);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          border-radius: 20px;
+          margin: 1vh;
+          z-index: 1;
+      }
+      #join-button-box p{
+          margin-top: 10px;
+          display: flex;
+          text-align: center;
+          
+          font-family: 'Rancho', cursive;
+          font-size: 1.2em;
+          /* letter-spacing: 0.5vh; */
+          line-height: 27px;
+        }
+        #join-button-box h1 {
+            font-family: f1;
+            font-weight: 400;
+            font-size: 2.5em;
+            letter-spacing: 0.1em;
+            padding: 5px 15px;
+        }
+
+        #join-us-button {
+            border: 2px solid white;
+            border-radius: 30px;
+            box-shadow: 2px 2px 15px black;
+            cursor: pointer;
+            position: relative;
+            top: 25px;
+            background-color: #f75c03;
+        }
+
+        #plane {
+            position: absolute;
+            top: 450px;
+            left: -450px;
+        }
+
+        .fly{
+            animation: flyPlane 5s forwards;
+        }
+
+        #plane img {
+            width: 50vh;
+            transform: rotateY(180deg);
+        }
+
+        @keyframes flyPlane {
+            0%{
+                transform: translateX(-450px);
+            }
+
+            100%{
+                transform: translateX(2450px);
+            }
+        }
+
+        #clouds {
+            position: absolute;
+            top: 0;
+            left: -1500px;
+        }
+
+        #clouds img {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .occur {
+            animation: flyClouds 7s forwards;
+        }
+
+        @keyframes flyClouds {
+            0%{
+                transform: translateX(-450px);
+            }
+
+            100%{
+                transform: translateX(3400px);
+            }
+        }
+
+        .disappear {
+            animation: disappear 1.5s 1.5s forwards;
+        }
+
+        @keyframes disappear {
+            0%{
+                opacity: 100%;
+            }
+            100%{
+                opacity: 0%;
+            }
+        }
